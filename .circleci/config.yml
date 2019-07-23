@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Deploy Master to Heroku
           command: |
-            git merge dev && git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME_DEV.git master
+            git merge dev && git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME_DEV.git master
   deploy_stg:
     docker:
       - image: circleci/node:12.6.0
@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Deploy Master to Heroku
           command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME_STG.git master
+            git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME_STG.git master
 
 workflows:
   version: 2
