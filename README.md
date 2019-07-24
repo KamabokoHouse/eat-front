@@ -1,24 +1,24 @@
 # eat-front
 
-## Project setup
+## For Developer
 
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Build Docker Img
 
 ```
-npm run serve
+docker build -t vuejs/eat-front-docker .
 ```
 
-### Compiles and minifies for production
+### Start eat-front
 
 ```
-npm run build
+docker run -it -p 9999:9999 --rm --name eat-front-docker-1 vuejs/eat-front-docker
 ```
 
-### Run your tests
+### Run tests
 
 ```
 npm run test
@@ -30,16 +30,6 @@ npm run test
 npm run lint
 ```
 
-### Run your unit tests
-
-```
-npm run test:unit
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 ## env
 
 ## Server
@@ -48,7 +38,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Dev
 
-- eat-fromnt-dev
+- eat-front-dev
 
 Stg
 
